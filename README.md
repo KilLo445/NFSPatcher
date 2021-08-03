@@ -14,3 +14,7 @@ To patch Need for Speed Underground follow these simple steps.
    (Deafult is C:\Program Files (x86)\EA GAMES\Need for Speed Underground / C:\Program Files (x86)\EA GAMES\Need for Speed Underground 2)
    
 3. Run it.
+
+![Underground](https://raw.githubusercontent.com/KilLo445/NFSUndergroundPatcher/main/img/ug.png)
+
+![Underground 2](https://raw.githubusercontent.com/KilLo445/NFSUndergroundPatcher/main/img/ug2.png)
