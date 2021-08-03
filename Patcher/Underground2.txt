@@ -1,0 +1,51 @@
+@echo off
+title Patch Need for Speed: Underground 2
+:checkinst
+IF EXIST "SPEED2.exe" (
+  goto startpatch
+) ELSE (
+  echo Please copy this file into your Need For Speed Underground 2 install location.
+  pause
+  exit
+)
+:startpatch
+echo Patching...
+md temp
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1NztUQnUFrX7xsvASDy_VWh0_cqUC-wWS', 'nocd.bat')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.dropbox.com/s/5gu8misrkgi8d66/nfsu2_v1.2_us.zip?dl=1', 'nfsu2_v1.2_us.zip')"
+move nfsu2_v1.2_us.zip temp >nul
+powershell Expand-Archive temp/nfsu2_v1.2_us.zip -DestinationPath temp
+timeout 2 /nobreak >nul
+start temp/nfsu2_v1.2_us.exe
+timeout 5 /nobreak >nul
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.dropbox.com/s/gr6ka0kdbk6oxf8/dimap.dll?dl=1', 'dimap.dll')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.dropbox.com/s/jrkqxa8kd676am6/dinput8.dll?dl=1', 'dinput8.dll')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.dropbox.com/s/lymzftys33e2ymd/scripts.zip?dl=1', 'scripts.zip')"
+powershell Expand-Archive scripts.zip -DestinationPath scripts
+move scripts.zip temp >nul
+echo Would you like to open the Widescreen Fix configuration? [Y/N]
+set /p widescreencfg=""
+if '%widescreencfg%'=='Y' start scripts/NFSUnderground2.WidescreenFix.ini
+if '%widescreencfg%'=='y' start scripts/NFSUnderground2.WidescreenFix.ini
+if '%widescreencfg%'=='N' goto finishpatch
+if '%widescreencfg%'=='n' goto finishpatch
+:finishpatch
+echo Would you like to install a No CD Patch? [Y/N]
+echo (I would recommend testing the game and making sure it will run before installing one)
+set /p nocd=""
+if '%nocd%'=='Y' goto nocddl
+if '%nocd%'=='y' goto nocddl
+if '%nocd%'=='N' goto nocdno
+if '%nocd%'=='n' goto nocdno
+:nocdno
+echo You can install a No CD Patch at any time by running nocd.bat located in the game directory
+goto patchcomplete
+:nocddl
+start nocd.bat
+goto patchcomplete
+:patchcomplete
+@RD /S /Q "temp"
+echo Patch complete!
+echo Press any key to exit...
+pause >nul
+exit
