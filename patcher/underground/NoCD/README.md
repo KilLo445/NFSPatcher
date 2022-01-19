@@ -1,4 +1,3 @@
 # NoCD
 
-NoCD patch from MyAbandonware
-https://www.myabandonware.com/
+NoCD patch from https://www.myabandonware.com/
