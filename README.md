@@ -10,8 +10,8 @@ Batch script that patches old NFS games to run on modern systems.
 
 ✔️ Need for Speed: Underground  
 ✔️ Need for Speed: Underground 2  
-⭕ Need for Speed: Most Wanted (Coming Soon)  
-⭕ Need for Speed: Carbon (Coming Soon)  
+✔️ Need for Speed: Most Wanted  
+✔️ Need for Speed: Carbon  
 ⭕ Need for Speed: ProStreet  
 ⭕ Need for Speed III: Hot Pursuit  
 ⭕ Need for Speed: Hot Pursuit 2  
