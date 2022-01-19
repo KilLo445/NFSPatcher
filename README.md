@@ -15,6 +15,6 @@ To patch Need for Speed, follow these simple steps.
    
 3. Run it.
 
-![Underground](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/img/ug.png)
+![Underground](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/patcher/img/ug.png)
 
-![Underground 2](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/img/ug2.png)
+![Underground 2](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/patcher/img/ug2.png)
