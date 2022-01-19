@@ -1,4 +1,3 @@
 # Patcher
 
-Widescreen Fix by ThirteenAG
-https://thirteenag.github.io/wfp
+All files for the patchers
