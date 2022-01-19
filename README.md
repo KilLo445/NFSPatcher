@@ -1,5 +1,5 @@
 # NFSPatcher
-Batch script that patches old NFS games to run on Windows 10
+Batch script that patches old NFS games to run on modern systems.
 
 <!-- Supported Games-->
 ## Games
