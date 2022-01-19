@@ -16,11 +16,11 @@ Batch script that patches old NFS games to run on modern systems.
 ⭕ Need for Speed III: Hot Pursuit  
 ❌ Need for Speed: Hot Pursuit 2 - Go [here](https://github.com/KilLo445/NFSPatcher/blob/main/patcher/hp2/README.md)  
 ❌ Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
-❌ Need for Speed: Undercover  
-❌ Need for Speed: Shift  
-❌ Need for Speed: The Run  
-❌ Need for Speed: Hot Pursuit (2010)  
-❌ Need for Speed: World  
+❌ Need for Speed: Undercover - Runs fine, [GenericFix](https://thirteenag.github.io/wfp#nfsuc)  
+❌ Need for Speed: Shift - Runs fine  
+❌ Need for Speed: The Run - Runs fine  
+❌ Need for Speed: Hot Pursuit (2010) - Runs fine  
+❌ Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)  
 
 ### Installation
 
