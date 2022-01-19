@@ -14,8 +14,8 @@ Batch script that patches old NFS games to run on modern systems.
 ✔️ Need for Speed: Carbon  
 ⭕ Need for Speed: ProStreet  
 ⭕ Need for Speed III: Hot Pursuit  
-⭕ Need for Speed: Hot Pursuit 2  
-⭕ Need for Speed: Porsche Unleashed  
+❌ Need for Speed: Hot Pursuit 2 - Go [here](https://github.com/KilLo445/NFSPatcher/blob/main/patcher/hp2/README.md)  
+❌ Need for Speed: Porsche Unleashed - Would be hard to make automatic  
 ❌ Need for Speed: Undercover  
 ❌ Need for Speed: Shift  
 ❌ Need for Speed: The Run  
