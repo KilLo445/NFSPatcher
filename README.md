@@ -12,7 +12,7 @@ Batch script that patches old NFS games to run on modern systems.
 ✔️ Need for Speed: Underground 2  
 ✔️ Need for Speed: Most Wanted  
 ✔️ Need for Speed: Carbon  
-⭕ Need for Speed: ProStreet  
+✔️ Need for Speed: ProStreet  
 ⭕ Need for Speed III: Hot Pursuit  
 ❌ Need for Speed: Hot Pursuit 2 - Go [here](https://github.com/KilLo445/NFSPatcher/blob/main/patcher/hp2/README.md)  
 ❌ Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
