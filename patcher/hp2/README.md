@@ -8,7 +8,7 @@ I can not provide a download to the files from the disc, and also cannot make th
 ThirteenAG does not have a fix for HP 2, the one that exists was made by [AuToMaNiAk005](https://www.youtube.com/channel/UCgSunVswSNC4e-Xac1aoz3g) and only supports certain resolutions, and you have to download the widescreen fix for your specific resolution, therefore, making it less automatic.  
 
 Watch [this video](https://www.youtube.com/watch?v=RX2HP_wzmN0) by [77Vids](https://www.youtube.com/channel/UC1c27haKExItNFfF0s_1FMQ) to get it running.  
-I have left a link to the widescreen fix below, allong with mirros just incase anything happens to the original drive.  
+I have left a link to the widescreen fix below, along with mirros just incase anything happens to the original drive.  
 **Please only use my mirror if the drive is down/doesn't exist.**
 
 ### WidescreenFix
