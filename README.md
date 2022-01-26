@@ -18,7 +18,7 @@ Batch script that patches old NFS games to run on modern systems.
 ❌ Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
 ❌ Need for Speed: Undercover - Runs fine, [GenericFix](https://thirteenag.github.io/wfp#nfsuc)  
 ❌ Need for Speed: Shift - Runs fine  
-❌ Need for Speed: The Run - Runs fine  
+❌ Need for Speed: The Run - Runs fine - Watch [this video](https://www.youtube.com/watch?v=Q70Rgyxhm8Q) to fix the infinite loading screen on origin  
 ❌ Need for Speed: Hot Pursuit (2010) - Runs fine  
 ❌ Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)  
 
