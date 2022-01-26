@@ -21,6 +21,8 @@ Batch script that patches old NFS games to run on modern systems.
 ❌ Need for Speed: The Run - Runs fine - Watch [this video](https://www.youtube.com/watch?v=Q70Rgyxhm8Q) to fix the infinite loading screen on origin  
 ❌ Need for Speed: Hot Pursuit (2010) - Runs fine  
 ❌ Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)  
+  
+**All patches are made for the US version of the game, I may update for other reigons in the future.**
 
 ### Installation
 
