@@ -9,7 +9,7 @@ If it does not work on other versions of windows, I am sorry.
 ## Games
 
 ✔️ - Available  
-⭕ - Planned, but not yet added  
+⭕ - Planned 
 ❌ - Not Planned, Most of these games run fine after instalation  
 
 ✔️ Need for Speed: Underground  
