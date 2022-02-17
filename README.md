@@ -14,7 +14,7 @@ If it does not work on other versions of windows, I am sorry.
 
 ✔️ Need for Speed: Underground  
 ✔️ Need for Speed: Underground 2  
-✔️ Need for Speed: Most Wanted  
+✔️ Need for Speed: Most Wanted (2005)  
 ✔️ Need for Speed: Carbon  
 ✔️ Need for Speed: ProStreet  
 ✔️ Need for Speed III: Hot Pursuit  
@@ -24,7 +24,8 @@ If it does not work on other versions of windows, I am sorry.
 ❌ Need for Speed: Shift - Runs fine  
 ❌ Need for Speed: The Run - Runs fine - Watch [this video](https://www.youtube.com/watch?v=Q70Rgyxhm8Q) to fix the infinite loading screen on origin  
 ❌ Need for Speed: Hot Pursuit (2010) - Runs fine  
-❌ Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)  
+❌ Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)
+❌ Need for Speed: Most Wanted (2012) - Runs fine  
   
 **All patches are made for the US version of the game, I may update for other reigons in the future.**
 
