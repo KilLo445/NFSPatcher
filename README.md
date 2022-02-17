@@ -2,14 +2,14 @@
 Batch script that patches old NFS games to run on modern systems.
 
 # Notice
-This script was made and tested on Windows 10, it should work on Windows 11.
-If it does not work on other versions of windows, I am sorry.
+This script was made and tested on Windows 10, it should work on Windows 11.  
+If it does not work on other versions of windows, I am sorry.  
 
 <!-- Supported Games-->
 ## Games
 
 ✔️ - Available  
-⭕ - Planned 
+⭕ - Planned  
 ❌ - Not Planned, Most of these games run fine after instalation  
 
 ✔️ Need for Speed: Underground  
