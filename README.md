@@ -20,7 +20,7 @@ This script is also made for the US versions of the games, it may not work on ot
 ✔️ Need for Speed: Carbon  
 ✔️ Need for Speed: ProStreet  
 ✔️ Need for Speed III: Hot Pursuit  
-❌ Need for Speed: Hot Pursuit 2 - Go [here](https://github.com/KilLo445/NFSPatcher/blob/main/patcher/hp2/README.md)  
+🟡 Need for Speed: Hot Pursuit 2 - Now supported, only through GUI - Go [here](https://github.com/KilLo445/NFSPatcher/blob/main/patcher/hp2/README.md)  
 ❌ Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
 ❌ Need for Speed: Undercover - Runs fine, [GenericFix](https://thirteenag.github.io/wfp#nfsuc)  
 ❌ Need for Speed: Shift - Runs fine  
