@@ -1,5 +1,12 @@
 # Need for Speed: Hot Pursuit 2
 
+## GUI
+
+Need for Speed: Hot Pursuit 2 is now supported, I have made a program for it specificly to patch.
+It can be found [here]().
+
+## Batch
+
 ### Why can this not be automatic?
 
 Hot Pursuit 2 does not require any patches like UG, UG2, MW, or Carbon do, it requires copying files from the disc, and getting the widescreen fix.  
