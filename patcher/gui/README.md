@@ -1,3 +1,3 @@
 ## NFSPatcherGUI
 
-Simple GUI version of the patcher.
+Simple GUI version of the patchers.
