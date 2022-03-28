@@ -30,6 +30,8 @@ This script is also made for the US versions of the games, it may not work on ot
 ❌ Need for Speed: Most Wanted (2012) - Runs fine  
   
 **All patches are made for the US version of the game, I may update for other reigons in the future.**
+
+**Please make sure your games are not installed in Program Files or Program Files (x86), as this may cause issues.**
   
 ### Installation (GUI) [New!]
 
@@ -44,6 +46,5 @@ This script is also made for the US versions of the games, it may not work on ot
 1. Download the [latest release](https://github.com/KilLo445/NFSPatcher/releases/tag/batch) corresponding to the game you want to patch and extract it.
   
 2. Place the .bat file in your Need for Speed install location.
-   (CANNOT BE INSTALLED IN PROGRAM FILES/PROGRAM FILES (x86) THE BAT WILL NOT RUN, EVEN IF YOU RUN IT AS ADMIN)
    
 3. Run it.
