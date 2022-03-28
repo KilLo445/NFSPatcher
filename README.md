@@ -31,9 +31,17 @@ This script is also made for the US versions of the games, it may not work on ot
   
 **All patches are made for the US version of the game, I may update for other reigons in the future.**
   
-### Installation
+### Installation (GUI) [New!]
 
-1. Download the [latest release](https://github.com/KilLo445/NFSPatcher/releases/latest) corresponding to the game you want to patch and extract it.
+1. Download the [latest release](https://github.com/KilLo445/NFSPatcher/releases/tag/gui).
+  
+2. Extract the ZIP.
+
+3. Run it.
+
+### Installation (Batch)
+
+1. Download the [latest release](https://github.com/KilLo445/NFSPatcher/releases/tag/batch) corresponding to the game you want to patch and extract it.
   
 2. Place the .bat file in your Need for Speed install location.
    (CANNOT BE INSTALLED IN PROGRAM FILES/PROGRAM FILES (x86) THE BAT WILL NOT RUN, EVEN IF YOU RUN IT AS ADMIN)
