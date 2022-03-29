@@ -2,8 +2,8 @@
 
 ## GUI
 
-Need for Speed: Hot Pursuit 2 is now supported, I have made a program for it specificly to patch.
-It can be found [here]().
+Need for Speed: Hot Pursuit 2 is now supported, I have made a program for it.
+It can be found [here](https://github.com/KilLo445/NFSPatcherGUI/releases/tag/hp2).
 
 ## WidescreenFix
 
