@@ -43,8 +43,10 @@ This script is also made for the US versions of the games, it may not work on ot
 
 ### Installation (Batch)
 
-1. Download the [latest release](https://github.com/KilLo445/NFSPatcher/releases/tag/batch) corresponding to the game you want to patch and extract it.
-  
-2. Place the .bat file in your Need for Speed install location.
-   
-3. Run it.
+1. Download the [latest release](https://github.com/KilLo445/NFSPatcher/releases/tag/batch) corresponding to the game you want to patch.
+
+2. Extract the ZIP.
+
+3. Place "patch.bat" into your the games install directory.
+
+4. Run it.
