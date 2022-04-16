@@ -38,5 +38,5 @@ The batch script version is no longer maintained, it may stop working at some po
 3. Run it.
 
 ### Source Code
-The source code can be found [here](https://github.com/KilLo445/NFSPatcherGUI/)
+The source code can be found [here](https://github.com/KilLo445/NFSPatcherGUI/)  
 It is not on this page because GitHub wouldn't let me upload it to an existsing repo.
