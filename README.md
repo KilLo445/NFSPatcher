@@ -2,7 +2,7 @@
 Simple program that patches old NFS games to run on modern systems.
 
 # Notice
-The batch script version is no longer maintained, it was made and tested on Windows 10, it should work on Windows 11.  
+The batch script version is no longer maintained, it may stop working at some point.    
   
 ## Games
   
