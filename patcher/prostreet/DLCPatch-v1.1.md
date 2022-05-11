@@ -10,4 +10,4 @@
 [Zippyshare](https://www105.zippyshare.com/v/3Si9sJGe/file.html)  
 [PCGamingWiki](https://community.pcgamingwiki.com/files/file/2045-need-for-speed-prostreet-patches/)  
   
-Patch 1.1 caps the frame rate at 30 FPS. To remove the cap, see NFS Pro Street Generic Fix. [-PCGamingWiki](https://www.pcgamingwiki.com/wiki/Need_for_Speed:_ProStreet)
+Patch 1.1 caps the frame rate at 30 FPS. To remove the cap, see NFS Pro Street Generic Fix. -[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Need_for_Speed:_ProStreet)
