@@ -81,10 +81,6 @@ namespace NFSPatcher
                 {
                     NFS10();
                 }
-                if (comboBoxSelection == "Need for Speed: ProStreet")
-                {
-                    NFS11();
-                }
             }
             else { return; }
         }
@@ -131,12 +127,6 @@ namespace NFSPatcher
 
         // NFS: Carbon
         private void NFS10()
-        {
-            MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
-        // NFS: ProStreet
-        private void NFS11()
         {
             MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }

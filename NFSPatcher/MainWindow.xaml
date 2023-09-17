@@ -24,7 +24,6 @@
                     <ComboBoxItem Content="Need for Speed: Underground 2"/>
                     <ComboBoxItem Content="Need for Speed: Most Wanted"/>
                     <ComboBoxItem Content="Need for Speed: Carbon"/>
-                    <ComboBoxItem Content="Need for Speed: ProStreet"/>
                 </ComboBox>
                 <Button Name="GoBTN" Content="Go!" Click="GoBTN_Click" FontSize="15" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
             </StackPanel>
