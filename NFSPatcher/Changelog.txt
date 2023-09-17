@@ -1,0 +1,4 @@
+﻿v0.1.0
+
+- Initial release
+- Only Need for Speed: Underground is currently available.
