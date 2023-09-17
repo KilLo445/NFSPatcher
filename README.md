@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![NFSPatcher Screenshot](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/Images/AppScreenshot01.png)
+![NFSPatcher Screenshot](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/Images/AppScreenshot01.png)
 
 Classic Need for Speed games are infamous for not running on modern hardware. This program helps out with that!
 
