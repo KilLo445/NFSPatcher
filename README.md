@@ -90,7 +90,9 @@ Features:
 ## Supported Games
 Any unchecked games are planned.
 
+- [ ] Need for Speed 2
 - [ ] Need for Speed III: Hot Pursuit
+- [ ] Need for Speed: High Stakes
 - [ ] Need for Speed: Hot Pursuit 2
 - [x] Need for Speed: Underground
 - [ ] Need for Speed: Underground 2
@@ -102,6 +104,8 @@ Any unchecked games are planned.
       it is just a simple [firewall rule](https://www.youtube.com/watch?v=Q70Rgyxhm8Q).
 
 ### Not planned
+- The Need for Speed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=A-Ifhb0KYIM)
+- Need for Speed: High Stakes - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0) 
 - Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
 - Need for Speed: Undercover - Runs fine, [GenericFix](https://thirteenag.github.io/wfp#nfsuc)  
 - Need for Speed: Shift - Runs fine  
