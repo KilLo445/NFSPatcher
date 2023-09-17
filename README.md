@@ -110,7 +110,8 @@ Any unchecked games are planned.
 - Need for Speed: Shift - Runs fine  
 - Need for Speed: Hot Pursuit (2010) - Runs fine  
 - Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)  
-- Need for Speed: Most Wanted (2012) - Runs fine 
+- Need for Speed: Most Wanted (2012) - Runs fine
+- All NFS games released after 2012
 
 See the [open issues](https://github.com/KilLo445/NFSPatcher/issues) for a full list of proposed features (and known issues).
 
