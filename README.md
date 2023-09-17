@@ -73,8 +73,10 @@ Features:
 
 ### Prerequisites
 
-.NET Framework 4.8 is required to run NFSPatcher.
-  * Get it here: https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
+.NET Framework Runtime 4.8 is required to run NFSPatcher.
+  - [Download page](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+  - [Direct (Web)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)
+  - [Direct (Offline)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-offline-installer)
 
 ### Installation
 
