@@ -1,0 +1,16 @@
+﻿<Application x:Class="NFSPatcher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NFSPatcher"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Button.xaml"/>
+                <ResourceDictionary Source="Theme/CloseButton.xaml"/>
+                <ResourceDictionary Source="Theme/MinimizeButton.xaml"/>
+                <ResourceDictionary Source="Theme/ComboBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

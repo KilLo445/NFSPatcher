@@ -92,7 +92,7 @@ Any unchecked games are planned.
 
 - [ ] Need for Speed III: Hot Pursuit
 - [ ] Need for Speed: Hot Pursuit 2
-- [ ] Need for Speed: Underground
+- [x] Need for Speed: Underground
 - [ ] Need for Speed: Underground 2
 - [ ] Need for Speed: Most Wanted (2005)
 - [ ] Need for Speed: Carbon

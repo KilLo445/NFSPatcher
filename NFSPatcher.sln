@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFSPatcher", "NFSPatcher\NFSPatcher.csproj", "{BD4597A5-E3B7-45A4-AE84-D09C245842A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD4597A5-E3B7-45A4-AE84-D09C245842A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4597A5-E3B7-45A4-AE84-D09C245842A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4597A5-E3B7-45A4-AE84-D09C245842A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4597A5-E3B7-45A4-AE84-D09C245842A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E61AC9F4-A78A-4B1C-98F7-BFDE4140C182}
+	EndGlobalSection
+EndGlobal

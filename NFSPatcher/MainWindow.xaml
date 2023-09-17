@@ -1,0 +1,52 @@
+﻿<Window x:Class="NFSPatcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NFSPatcher"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Background="Black"
+        AllowsTransparency="False"
+        Title="NFSPatcher" Height="450" Width="800">
+    <Grid>
+        <Image Source="Assets/Images/Backgrounds/2015.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Opacity="0.4"/>
+        <Image Source="Assets/Images/Logo/Vertical/LogoWhite2.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
+            <TextBlock Text="Select Game..." Foreground="White" FontSize="15" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Light" Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
+                <ComboBox Name="ComboBox" IsEditable="False" FontSize="18" Width="300" Height="30" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+                    <ComboBoxItem Content="Need for Speed III: Hot Pursuit"/>
+                    <ComboBoxItem Content="Need for Speed: Hot Pursuit 2"/>
+                    <ComboBoxItem Content="Need for Speed: Underground"/>
+                    <ComboBoxItem Content="Need for Speed: Underground 2"/>
+                    <ComboBoxItem Content="Need for Speed: Most Wanted"/>
+                    <ComboBoxItem Content="Need for Speed: Carbon"/>
+                    <ComboBoxItem Content="Need for Speed: ProStreet"/>
+                </ComboBox>
+                <Button Name="GoBTN" Content="Go!" Click="GoBTN_Click" FontSize="15" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Image Name="Settings" Source="Assets/Images/Gear/GearWhite.png" MouseDown="Settings_MouseDown" ToolTip="Settings" Width="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0">
+            <Image.ContextMenu>
+                <ContextMenu Name="settingsCM">
+                    <MenuItem Name="RootPath" Header="Open root path"
+                              Click="RootPath_Click"/>
+                    <MenuItem Name="ViewChangelog" Header="Changelog"
+                              Click="ViewChangelog_Click"/>
+                    <MenuItem Name="OpenGitHub" Header="GitHub"
+                               Click="OpenGitHub_Click"/>
+                    <MenuItem Name="OpenReleasePage" Header="Latest release"
+                               Click="OpenReleasePage_Click"/>
+                    <MenuItem Name="ViewAbout" Header="About"
+                               Click="ViewAbout_Click"/>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>
+
+        <TextBlock Name="VersionText" Text="" FontSize="15" FontFamily="/Assets/Fonts/Poppins/#Poppins" FontWeight="Light" Foreground="White" Opacity="0.4" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,5"/>
+    </Grid>
+</Window>
