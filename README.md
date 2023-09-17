@@ -47,32 +47,76 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#supported-games">Supported Games</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Screen Shot][https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/Images/AppScreenshot01.png]](https://example.com)
+[![NFSPatcher Screenshot](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/Images/AppScreenshot01.png)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Classic Need for Speed games are infamous for not running on modern hardware. This program helps out with that!
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Features:
+* Automatically download and apply patches
+* Automatically apply NoCD patch
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+### Built With
 
-Use the `BLANK_README.md` to get started.
+* [![.NET][.NET]][framework-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+.NET Framework 4.8 is required to run NFSPatcher.
+  * Get it here: https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
+
+### Installation
+
+1. Head over to the [latest release](https://github.com/KilLo445/NFSPatcher/releases/latest)
+2. Download `NFSPatcher-vX.X.X.zip`
+3. Extract somewhere safe
+4. Run `NFSPatcher.exe`
+5. Pick your game and patch!
+
+<!-- ROADMAP -->
+## Supported Games
+Any unchecked games are planned.
+
+- [ ] Need for Speed III: Hot Pursuit
+- [ ] Need for Speed: Hot Pursuit 2
+- [ ] Need for Speed: Underground
+- [ ] Need for Speed: Underground 2
+- [ ] Need for Speed: Most Wanted (2005)
+- [ ] Need for Speed: Carbon
+- [ ] Need for Speed: ProStreet
+
+See the [open issues](https://github.com/KilLo445/NFSPatcher/issues) for a full list of proposed features (and known issues).
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<!-- CONTACT -->
+## Contact
+
+- Discord
+    - @decentloser / DecentLoser#7263
+    - [My Server](https://discord.gg/66qymzdtMw) (Preferred)
+- Twitter / X
+  - [@KilLo445](https://twitter.com/KilLo445)
+
+Project Link: [https://github.com/KilLo445/NFSPatcher](https://github.com/KilLo445/NFSPatcher)
+
+NFSPatcher is not affiliated with EA nor the Need for Speed brand in any way.
+  
+<p align="center">(<a href="#readme-top">Back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -82,3 +126,6 @@ Use the `BLANK_README.md` to get started.
 [stars-url]: https://github.com/KilLo445/NFSPatcher/stargazers
 [issues-shield]: https://img.shields.io/github/issues/KilLo445/NFSPatcher.svg?style=for-the-badge
 [issues-url]: https://github.com/KilLo445/NFSPatcher/issues
+[.NET]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
+[Framework]: https://img.shields.io/badge/.NET_Framework-4.8-purple
+[framework-url]: [https://nextjs.org/](https://dotnet.microsoft.com/en-us/download/dotnet-framework)https://dotnet.microsoft.com/en-us/download/dotnet-framework
