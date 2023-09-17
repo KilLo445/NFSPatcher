@@ -1,0 +1,35 @@
+﻿<Window x:Class="NFSPatcher.Windows.NFS10"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NFSPatcher.Windows"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Black"
+        AllowsTransparency="False"
+        Title="NFSPatcher" Height="450" Width="750">
+    <Grid>
+        <Image Source="/Assets/Images/Backgrounds/Carbon.png" Stretch="UniformToFill" Opacity="0.2"/>
+
+        <Image Source="/Assets/Images/Logo/Game/Carbon.png" Width="450" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
+
+        <StackPanel Orientation="Vertical" Width="700" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            <TextBlock Name="StatusText" Margin="0,0,0,10" Width="700" FontSize="17" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto/#Roboto" HorizontalAlignment="Left" Foreground="White" Text="Welcome to NFSPatcher!"/>
+            <ProgressBar Margin="0 0 0 10" Name="pb" IsIndeterminate="False" Value="0" Height="5" Width="700" Visibility="Visible"/>
+        </StackPanel>
+
+        <StackPanel Name="PatchList" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,80" Grid.ColumnSpan="2" Visibility="Visible">
+            <ComboBox Name="ComboBox" IsEditable="False" FontSize="18" Width="300" Height="30" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+                <ComboBoxItem Content="Main Patches"/>
+                <ComboBoxItem Content="NoCD Patch"/>
+            </ComboBox>
+            <Button Name="GoBTN" Content="Go!" Click="GoBTN_Click" FontSize="15" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        </StackPanel>
+
+        <Rectangle Name="DragWindow" Fill="Transparent" MouseLeftButtonDown="DragWindow_MouseLeftButtonDown" Height="20" Width="750" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="2" Name="CloseButton" Text="X" FontSize="25" MouseLeftButtonDown="CloseButton_MouseLeftButtonDown" Style="{StaticResource CloseButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Margin="0,5,10,0"/>
+    </Grid>
+</Window>

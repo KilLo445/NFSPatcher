@@ -1,9 +1,13 @@
-﻿v0.2.0
+﻿v0.3.0
+- Added Need for Speed: Most Wanted (2005)
+- Added Need for Speed: Carbon
+- Added Need for Speed: The Run
+- Added abillity to delete Temp Folder
 
+v0.2.0
 - Added Need for Speed: Underground 2
 - Changed patch window UI
 
 v0.1.0
-
 - Initial release
 - Only Need for Speed: Underground is currently available.

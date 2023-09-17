@@ -24,16 +24,19 @@
                     <ComboBoxItem Content="Need for Speed: Underground 2"/>
                     <ComboBoxItem Content="Need for Speed: Most Wanted"/>
                     <ComboBoxItem Content="Need for Speed: Carbon"/>
+                    <ComboBoxItem Content="Need for Speed: The Run"/>
                 </ComboBox>
                 <Button Name="GoBTN" Content="Go!" Click="GoBTN_Click" FontSize="15" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
             </StackPanel>
         </StackPanel>
 
-        <Image Name="Settings" Source="Assets/Images/Gear/GearWhite.png" MouseDown="Settings_MouseDown" ToolTip="Settings" Width="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0">
+        <Image Name="Settings" Source="Assets/Images/Gear/GearWhite.png" MouseEnter="Settings_MouseEnter" MouseLeave="Settings_MouseLeave" MouseDown="Settings_MouseDown" ToolTip="Settings" Width="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0">
             <Image.ContextMenu>
                 <ContextMenu Name="settingsCM">
                     <MenuItem Name="RootPath" Header="Open root path"
                               Click="RootPath_Click"/>
+                    <MenuItem Name="DelTemp" Header="Delete temp"
+                              Click="DelTemp_Click"/>
                     <MenuItem Name="ViewChangelog" Header="Changelog"
                               Click="ViewChangelog_Click"/>
                     <MenuItem Name="OpenGitHub" Header="GitHub"

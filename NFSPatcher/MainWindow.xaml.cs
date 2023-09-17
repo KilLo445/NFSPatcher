@@ -7,19 +7,21 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace NFSPatcher
 {
     public partial class MainWindow : Window
     {
         // Strings
-        string version = "0.2.0";
+        string version = "0.3.0";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";
         string latestReleasePage = "https://github.com/KilLo445/NFSPatcher/releases/latest";
 
         // Paths
         string rootPath;
+        string tempPath;
 
         public MainWindow()
         {
@@ -32,13 +34,13 @@ namespace NFSPatcher
             InitializeComponent();
 
             rootPath = Directory.GetCurrentDirectory();
+            tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher");
 
             VersionText.Text = "v" + version;
         }
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            string tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher");
             if (Directory.Exists(tempPath))
             {
                 try
@@ -81,6 +83,10 @@ namespace NFSPatcher
                 {
                     NFS10();
                 }
+                if (comboBoxSelection == "Need for Speed: The Run")
+                {
+                    NFS18();
+                }
             }
             else { return; }
         }
@@ -92,13 +98,13 @@ namespace NFSPatcher
         // NFS III: Hot Pursuit
         private void NFS3()
         {
-            MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Coming soon.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         // NFS: Hot Pursuit 2
         private void NFS6()
         {
-            MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Coming soon.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         // NFS: Underground
@@ -128,13 +134,37 @@ namespace NFSPatcher
         // NFS: Most Wanted (2005)
         private void NFS9()
         {
-            MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                NFS9 mwWindow = new NFS9();
+                this.Close();
+                mwWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
         // NFS: Carbon
         private void NFS10()
         {
-            MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                NFS10 cWindow = new NFS10();
+                this.Close();
+                cWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        // NFS: The Run
+        private void NFS18()
+        {
+            try
+            {
+                NFS18 trWindow = new NFS18();
+                this.Close();
+                trWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
 
@@ -154,6 +184,24 @@ namespace NFSPatcher
             }
         }
 
+        private void Settings_MouseEnter(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                this.Settings.Source = new BitmapImage(new Uri("pack://application:,,,/Assets/Images/Gear/GearGray.png"));
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        private void Settings_MouseLeave(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                this.Settings.Source = new BitmapImage(new Uri("pack://application:,,,/Assets/Images/Gear/GearWhite.png"));
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
         private void RootPath_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -161,6 +209,20 @@ namespace NFSPatcher
                 Process.Start(rootPath);
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        private void DelTemp_Click(object sender, RoutedEventArgs e)
+        {
+            if (Directory.Exists(tempPath))
+            {
+                try
+                {
+                    Directory.Delete(tempPath, true);
+                    MessageBox.Show("Temp path deleted.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
+            else { MessageBox.Show("Temp path does not exist.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
         private void ViewChangelog_Click(object sender, RoutedEventArgs e)

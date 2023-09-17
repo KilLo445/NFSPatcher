@@ -78,11 +78,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\NFS10.xaml.cs">
+      <DependentUpon>NFS10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS18.xaml.cs">
+      <DependentUpon>NFS18.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\NFS7.xaml.cs">
       <DependentUpon>NFS7.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NFS8.xaml.cs">
       <DependentUpon>NFS8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS9.xaml.cs">
+      <DependentUpon>NFS9.xaml</DependentUpon>
     </Compile>
     <Page Include="About.xaml">
       <SubType>Designer</SubType>
@@ -126,11 +135,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\NFS10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\NFS7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NFS8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -225,11 +246,11 @@
     <Resource Include="Assets\Images\Backgrounds\2015.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Images\Backgrounds\Carbon.png" />
+    <Resource Include="Assets\Images\Backgrounds\Carbon.png" />
     <None Include="Assets\Images\Backgrounds\HP.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Images\Backgrounds\MW.png" />
+    <Resource Include="Assets\Images\Backgrounds\MW.png" />
     <Resource Include="Assets\Images\Backgrounds\UG.png" />
     <Resource Include="Assets\Images\Backgrounds\UG2.png" />
   </ItemGroup>
@@ -243,14 +264,23 @@
     <Resource Include="Assets\Images\Backgrounds\Rivals.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Images\Logo\Game\Carbon.png" />
+    <Resource Include="Assets\Images\Logo\Game\Carbon.png" />
     <None Include="Assets\Images\Logo\Game\HP.png" />
-    <None Include="Assets\Images\Logo\Game\MW.png" />
+    <Resource Include="Assets\Images\Logo\Game\MW.png" />
     <Resource Include="Assets\Images\Logo\Game\UG.png" />
     <Resource Include="Assets\Images\Logo\Game\UG2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Images\Logo\Game\HP2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo\Game\TR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Backgrounds\TR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Gear\GearGray.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

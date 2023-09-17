@@ -96,11 +96,9 @@ Any unchecked games are planned.
 - [ ] Need for Speed: Hot Pursuit 2
 - [x] Need for Speed: Underground
 - [x] Need for Speed: Underground 2
-- [ ] Need for Speed: Most Wanted (2005)
-- [ ] Need for Speed: Carbon
-- [ ] Need for Speed: The Run  
-      Maybe? Not quite sure if I will add this one.  
-      it is just a simple [firewall rule](https://www.youtube.com/watch?v=Q70Rgyxhm8Q).
+- [x] Need for Speed: Most Wanted (2005)
+- [x] Need for Speed: Carbon
+- [x] Need for Speed: The Run
 
 ### Not planned
 - The Need for Speed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=A-Ifhb0KYIM)  
