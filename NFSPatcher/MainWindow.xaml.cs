@@ -13,7 +13,7 @@ namespace NFSPatcher
     public partial class MainWindow : Window
     {
         // Strings
-        string version = "0.1.0";
+        string version = "0.2.0";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";
         string latestReleasePage = "https://github.com/KilLo445/NFSPatcher/releases/latest";
@@ -116,7 +116,13 @@ namespace NFSPatcher
         // NFS: Underground 2
         private void NFS8()
         {
-            MessageBox.Show("Coming soon.", "", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                NFS8 ug2Window = new NFS8();
+                this.Close();
+                ug2Window.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
         // NFS: Most Wanted (2005)

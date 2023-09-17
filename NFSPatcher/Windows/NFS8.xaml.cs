@@ -12,12 +12,12 @@ using WinForms = System.Windows.Forms;
 
 namespace NFSPatcher.Windows
 {
-    public partial class NFS7 : Window
+    public partial class NFS8 : Window
     {
         // Strings
-        string gameName = "Need for Speed: Underground";
-        string gameNameS = "NFS: Underground";
-        string exeName = "Speed.exe";
+        string gameName = "Need for Speed: Underground 2";
+        string gameNameS = "NFS: Underground 2";
+        string exeName = "SPEED2.exe";
 
         // Paths
         string rootPath;
@@ -33,9 +33,9 @@ namespace NFSPatcher.Windows
         string wfpPath;
         string dInputDLL;
 
-        string patchName = "US_PATCH_4";
-        string patchNameZip = "US_PATCH_4.zip";
-        string patchNameExe = "US_PATCH_4.exe";
+        string patchName = "nfsu2_v1.2_us";
+        string patchNameZip = "nfsu2_v1.2_us.zip";
+        string patchNameExe = "nfsu2_v1.2_us.exe";
 
         // Bools
         bool isBusy = false;
@@ -43,23 +43,23 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG/US_PATCH_4.zip";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG2/nfsu2_v1.2_us.zip";
         string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/DirectInputMapper/dimap.dll";
-        string widescreenLink = "https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsu/NFSUnderground.WidescreenFix.zip";
-        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG/WidescreenFix/NFSUnderground.WidescreenFix.zip";
+        string widescreenLink = "https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsu2/NFSUnderground2.WidescreenFix.zip";
+        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG2/WidescreenFix/NFSUnderground2.WidescreenFix.zip";
 
-        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG/NoCD/Speed.exe";
+        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG2/NoCD/SPEED2.EXE";
 
-        public NFS7()
+        public NFS8()
         {
             InitializeComponent();
 
             rootPath = Directory.GetCurrentDirectory();
-            tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher", "UG");
+            tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher", "UG2");
 
             patchZip = Path.Combine(tempPath, patchNameZip);
             patchExe = Path.Combine(tempPath, patchNameExe);
-            wfpZip = Path.Combine(tempPath, "NFSUnderground.WidescreenFix.zip");
+            wfpZip = Path.Combine(tempPath, "NFSUnderground2.WidescreenFix.zip");
             dInputDLL = Path.Combine(tempPath, "dimap.dll");
 
             if (Directory.Exists(tempPath)) { Directory.Delete(tempPath, true); }
@@ -86,7 +86,7 @@ namespace NFSPatcher.Windows
 
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
-            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\Need For Speed Underground", true);
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\Need For Speed Underground 2", true);
             Object obPath = key.GetValue("Install Dir");
             if (obPath != null)
             {
@@ -151,7 +151,7 @@ namespace NFSPatcher.Windows
                 return;
             }
             else
-            { 
+            {
                 selectPathCanceled = true;
                 return;
             }
@@ -179,7 +179,7 @@ namespace NFSPatcher.Windows
 
             try
             {
-                StatusText.Text = "Downloading v1.4 Patch... (1 of 3)";
+                StatusText.Text = "Downloading v1.2 Patch... (1 of 3)";
                 pb.IsIndeterminate = false;
                 WebClient webClient = new WebClient();
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(PatchDLComplete);
@@ -214,7 +214,7 @@ namespace NFSPatcher.Windows
         private void WFPDLComplete(object sender, AsyncCompletedEventArgs e)
         {
             pb.Value = 0;
-            pb.IsIndeterminate = false;   
+            pb.IsIndeterminate = false;
             try
             {
                 StatusText.Text = "Downloading DirectInputMapper... (3 of 3)";
@@ -257,8 +257,8 @@ namespace NFSPatcher.Windows
                 await Task.Delay(500);
                 wfpPath = Path.Combine(tempPath, "scripts");
                 Directory.CreateDirectory(wfpPath);
-                StatusText.Text = $"Extracting NFSUnderground.WidescreenFix.zip..."; await Task.Run(() => ZipFile.ExtractToDirectory(wfpZip, wfpPath));
-                StatusText.Text = $"Deleting NFSUnderground.WidescreenFix.zip..."; await Task.Run(() => File.Delete(wfpZip));
+                StatusText.Text = $"Extracting NFSUnderground2.WidescreenFix.zip..."; await Task.Run(() => ZipFile.ExtractToDirectory(wfpZip, wfpPath));
+                StatusText.Text = $"Deleting NFSUnderground2.WidescreenFix.zip..."; await Task.Run(() => File.Delete(wfpZip));
                 await Task.Delay(500);
                 StatusText.Text = $"Starting {patchNameExe}..."; Process.Start(patchExe);
                 await Task.Delay(300);
@@ -318,7 +318,7 @@ namespace NFSPatcher.Windows
                 if (wfpCFG == MessageBoxResult.Yes)
                 {
                     StatusText.Text = $"Opening Widescreen Fix configuration...";
-                    string wfpCFGPath = Path.Combine(installPath, "scripts", "NFSUnderground.WidescreenFix.ini");
+                    string wfpCFGPath = Path.Combine(installPath, "scripts", "NFSUnderground2.WidescreenFix.ini");
                     Process.Start(wfpCFGPath);
                 }
 
@@ -380,7 +380,7 @@ namespace NFSPatcher.Windows
                 await Task.Delay(500);
                 StatusText.Text = $"Installing NoCD Patch... (2 of 2)"; await Task.Run(() => File.Delete(noCDPath));
                 await Task.Delay(300);
-                
+
                 StatusText.Text = "Welcome to NFSPatcher!";
                 pb.IsIndeterminate = false;
                 MessageBox.Show("NoCD Patch installed!", $"{gameName}", MessageBoxButton.OK, MessageBoxImage.Information);

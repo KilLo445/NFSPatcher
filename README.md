@@ -95,7 +95,7 @@ Any unchecked games are planned.
 - [ ] Need for Speed: High Stakes
 - [ ] Need for Speed: Hot Pursuit 2
 - [x] Need for Speed: Underground
-- [ ] Need for Speed: Underground 2
+- [x] Need for Speed: Underground 2
 - [ ] Need for Speed: Most Wanted (2005)
 - [ ] Need for Speed: Carbon
 - [ ] Need for Speed: The Run  
