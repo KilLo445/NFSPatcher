@@ -97,6 +97,17 @@ Any unchecked games are planned.
 - [ ] Need for Speed: Most Wanted (2005)
 - [ ] Need for Speed: Carbon
 - [ ] Need for Speed: ProStreet
+- [ ] Need for Speed: The Run  
+      Maybe? Not quite sure if I will add this one.  
+      it is just a simple [firewall rule](https://www.youtube.com/watch?v=Q70Rgyxhm8Q).
+
+### Not planned
+- Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
+- Need for Speed: Undercover - Runs fine, [GenericFix](https://thirteenag.github.io/wfp#nfsuc)  
+- Need for Speed: Shift - Runs fine  
+- Need for Speed: Hot Pursuit (2010) - Runs fine  
+- Need for Speed: World - Watch [this video](https://www.youtube.com/watch?v=hbhxuqmKVq8)  
+- Need for Speed: Most Wanted (2012) - Runs fine 
 
 See the [open issues](https://github.com/KilLo445/NFSPatcher/issues) for a full list of proposed features (and known issues).
 
