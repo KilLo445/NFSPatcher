@@ -143,4 +143,4 @@ NFSPatcher is not affiliated with EA nor the Need for Speed brand in any way.
 [issues-url]: https://github.com/KilLo445/NFSPatcher/issues
 [.NET]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
 [Framework]: https://img.shields.io/badge/.NET_Framework-4.8-purple
-[framework-url]: [https://nextjs.org/](https://dotnet.microsoft.com/en-us/download/dotnet-framework)https://dotnet.microsoft.com/en-us/download/dotnet-framework
+[framework-url]: https://dotnet.microsoft.com/en-us/download/dotnet-framework
