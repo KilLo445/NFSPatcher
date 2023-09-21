@@ -8,15 +8,14 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/KilLo445/NFSPatcher">
     <img src="https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/NFSPatcher/Assets/Images/Logo/Vertical/LogoWhite2.png" alt="Logo" width=800>
+    <br />
+    <br />
   </a>
 
   <p align="center">
@@ -27,7 +26,13 @@
     <a href="https://github.com/KilLo445/NFSPatcher/issues">Report Bug</a>
     ·
     <a href="https://github.com/KilLo445/NFSPatcher/issues">Request Feature</a>
+    <br />
+    <br />
   </p>
+
+  [![Forks][forks-shield]][forks-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
 </div>
 
 <!-- TABLE OF CONTENTS -->
