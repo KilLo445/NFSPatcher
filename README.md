@@ -146,6 +146,6 @@ NFSPatcher is not affiliated with EA nor the Need for Speed brand in any way.
 [stars-url]: https://github.com/KilLo445/NFSPatcher/stargazers
 [issues-shield]: https://img.shields.io/github/issues/KilLo445/NFSPatcher.svg?style=for-the-badge
 [issues-url]: https://github.com/KilLo445/NFSPatcher/issues
-[.NET]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
+[.NET]: https://img.shields.io/badge/.NET_Framework-5C2D91?style=for-the-badge&logo=.net&logoColor=white
 [Framework]: https://img.shields.io/badge/.NET_Framework-4.8-purple
 [framework-url]: https://dotnet.microsoft.com/en-us/download/dotnet-framework
