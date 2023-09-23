@@ -12,13 +12,15 @@
         Title="NFSPatcher" Height="450" Width="800">
     <Grid>
         <Image Source="Assets/Images/Backgrounds/2015.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Opacity="0.4"/>
-        <Image Source="Assets/Images/Logo/Vertical/LogoWhite2.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
+        <Image Source="Assets/Images/Logo/Vertical/LogoWhite2_400px.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
             <TextBlock Text="Select Game..." Foreground="White" FontSize="15" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Light" Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
                 <ComboBox Name="ComboBox" IsEditable="False" FontSize="18" Width="300" Height="30" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+                    <ComboBoxItem Content="Need for Speed II SE"/>
                     <ComboBoxItem Content="Need for Speed III: Hot Pursuit"/>
+                    <ComboBoxItem Content="Need for Speed: High Stakes"/>
                     <ComboBoxItem Content="Need for Speed: Hot Pursuit 2"/>
                     <ComboBoxItem Content="Need for Speed: Underground"/>
                     <ComboBoxItem Content="Need for Speed: Underground 2"/>

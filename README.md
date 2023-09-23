@@ -95,7 +95,7 @@ Features:
 ## Supported Games
 Any unchecked games are planned.
 
-- [ ] Need for Speed 2
+- [x] Need for Speed 2 SE
 - [ ] Need for Speed III: Hot Pursuit
 - [ ] Need for Speed: High Stakes
 - [ ] Need for Speed: Hot Pursuit 2

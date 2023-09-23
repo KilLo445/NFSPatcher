@@ -14,7 +14,7 @@ namespace NFSPatcher
     public partial class MainWindow : Window
     {
         // Strings
-        string version = "0.3.0";
+        string version = "0.4.0";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";
         string latestReleasePage = "https://github.com/KilLo445/NFSPatcher/releases/latest";
@@ -23,9 +23,11 @@ namespace NFSPatcher
         string rootPath;
         string tempPath;
 
+        bool delTempOnStart = false;
+
         public MainWindow()
         {
-            if (System.Diagnostics.Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1)
+            if (Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1)
             {
                 MessageBox.Show("NFSPatcher is already running.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 Application.Current.Shutdown();
@@ -37,6 +39,20 @@ namespace NFSPatcher
             tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher");
 
             VersionText.Text = "v" + version;
+
+            if (delTempOnStart == true)
+            {
+                if (Directory.Exists(tempPath))
+                {
+                    try
+                    {
+                        Directory.Delete(tempPath, true);
+                        MessageBox.Show("Temp path deleted.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+                }
+                else { MessageBox.Show("Temp path does not exist.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -59,9 +75,17 @@ namespace NFSPatcher
             }
             if (comboBoxSelection != null)
             {
+                if (comboBoxSelection == "Need for Speed II SE")
+                {
+                    NFS2();
+                }
                 if (comboBoxSelection == "Need for Speed III: Hot Pursuit")
                 {
                     NFS3();
+                }
+                if (comboBoxSelection == "Need for Speed: High Stakes")
+                {
+                    NFS4();
                 }
                 if (comboBoxSelection == "Need for Speed: Hot Pursuit 2")
                 {
@@ -95,8 +119,32 @@ namespace NFSPatcher
         // Games
         ////////////////////
 
+        // NFS II SE
+        private void NFS2()
+        {
+            try
+            {
+                NFS2 iiWindow = new NFS2();
+                this.Close();
+                iiWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
         // NFS III: Hot Pursuit
         private void NFS3()
+        {
+            try
+            {
+                NFS3 iiiWindow = new NFS3();
+                this.Close();
+                iiiWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        // NFS: High Stakes
+        private void NFS4()
         {
             MessageBox.Show("Coming soon.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
         }

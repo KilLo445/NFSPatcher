@@ -58,6 +58,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -83,6 +84,12 @@
     </Compile>
     <Compile Include="Windows\NFS18.xaml.cs">
       <DependentUpon>NFS18.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS2.xaml.cs">
+      <DependentUpon>NFS2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS3.xaml.cs">
+      <DependentUpon>NFS3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NFS7.xaml.cs">
       <DependentUpon>NFS7.xaml</DependentUpon>
@@ -140,6 +147,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NFS18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,7 +252,7 @@
   <ItemGroup>
     <None Include="Assets\Images\Logo\Vertical\LogoBlack.png" />
     <None Include="Assets\Images\Logo\Vertical\LogoWhite.png" />
-    <Resource Include="Assets\Images\Logo\Vertical\LogoWhite2.png" />
+    <None Include="Assets\Images\Logo\Vertical\LogoWhite2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Changelog.txt" />
@@ -247,7 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Backgrounds\Carbon.png" />
-    <None Include="Assets\Images\Backgrounds\HP.png" />
+    <Resource Include="Assets\Images\Backgrounds\HP.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Backgrounds\MW.png" />
@@ -265,7 +280,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Logo\Game\Carbon.png" />
-    <None Include="Assets\Images\Logo\Game\HP.png" />
+    <Resource Include="Assets\Images\Logo\Game\HP.png" />
     <Resource Include="Assets\Images\Logo\Game\MW.png" />
     <Resource Include="Assets\Images\Logo\Game\UG.png" />
     <Resource Include="Assets\Images\Logo\Game\UG2.png" />
@@ -281,6 +296,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Gear\GearGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo\Game\II.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Backgrounds\II.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo\Vertical\LogoWhite2_400px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

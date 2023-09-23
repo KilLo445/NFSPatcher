@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows;
@@ -146,7 +145,9 @@ namespace NFSPatcher.Windows
             }
             else
             {
+                pb.IsIndeterminate = false;
                 selectPathCanceled = true;
+                StatusText.Text = $"Welcome to NFSPatcher!";
                 return;
             }
         }

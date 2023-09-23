@@ -1,4 +1,8 @@
-﻿v0.3.0
+﻿v0.4.0
+- Added Need for Speed II SE
+- Added Need for Speed III: Hot Pursuit
+
+v0.3.0
 - Added Need for Speed: Most Wanted (2005)
 - Added Need for Speed: Carbon
 - Added Need for Speed: The Run

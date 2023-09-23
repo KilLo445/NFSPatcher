@@ -152,7 +152,9 @@ namespace NFSPatcher.Windows
             }
             else
             {
+                pb.IsIndeterminate = false;
                 selectPathCanceled = true;
+                StatusText.Text = $"Welcome to NFSPatcher!";
                 return;
             }
         }
