@@ -43,12 +43,12 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG2/nfsu2_v1.2_us.zip";
-        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/DirectInputMapper/dimap.dll";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/UG2/nfsu2_v1.2_us.zip";
+        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/DirectInputMapper/dimap.dll";
         string widescreenLink = "https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsu2/NFSUnderground2.WidescreenFix.zip";
-        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG2/WidescreenFix/NFSUnderground2.WidescreenFix.zip";
+        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/UG2/WidescreenFix/NFSUnderground2.WidescreenFix.zip";
 
-        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG2/NoCD/SPEED2.EXE";
+        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/UG2/NoCD/SPEED2.EXE";
 
         public NFS8()
         {

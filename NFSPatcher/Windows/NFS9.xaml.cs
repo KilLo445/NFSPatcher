@@ -43,12 +43,12 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/MW/nfsmwpatch1.3.zip";
-        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/DirectInputMapper/dimap.dll";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/MW/nfsmwpatch1.3.zip";
+        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/DirectInputMapper/dimap.dll";
         string widescreenLink = "https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsmw/NFSMostWanted.WidescreenFix.zip";
-        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/MW/WidescreenFix/NFSMostWanted.WidescreenFix.zip";
+        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/MW/WidescreenFix/NFSMostWanted.WidescreenFix.zip";
 
-        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/MW/NoCD/speed.exe";
+        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/MW/NoCD/speed.exe";
 
         public NFS9()
         {

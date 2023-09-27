@@ -1,1 +1,0 @@
-https://github.com/zaps166/NFSIISE/releases/latest/download/nfs2se-win32.zip

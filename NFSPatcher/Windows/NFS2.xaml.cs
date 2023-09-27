@@ -35,7 +35,7 @@ namespace NFSPatcher.Windows
 
         // Links
         string patchLink = "https://github.com/zaps166/NFSIISE/releases/latest/download/nfs2se-win32.zip";
-        string patchLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/NFS2/nfs2se-win32.zip";
+        string patchLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/NFS2/nfs2se-win32.zip";
 
         public NFS2()
         {

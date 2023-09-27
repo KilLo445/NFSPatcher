@@ -11,7 +11,7 @@ namespace NFSPatcher
         private string rootPath;
         private string tempPath;
 
-        string changelogLink = "https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/NFSPatcher/Changelog.txt";
+        string changelogLink = "https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Changelog.txt";
         string changelogContent;
 
         int fontSize = 14;

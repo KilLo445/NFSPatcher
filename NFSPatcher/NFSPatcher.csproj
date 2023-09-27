@@ -255,9 +255,6 @@
     <None Include="Assets\Images\Logo\Vertical\LogoWhite2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Changelog.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\Images\Backgrounds\2015.jpg" />
   </ItemGroup>
   <ItemGroup>

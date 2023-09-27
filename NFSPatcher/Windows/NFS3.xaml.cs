@@ -34,7 +34,7 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/HP/ModernPatch/nfs3_modern_patch_v1.6.1.zip";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/HP/ModernPatch/nfs3_modern_patch_v1.6.1.zip";
 
         public NFS3()
         {

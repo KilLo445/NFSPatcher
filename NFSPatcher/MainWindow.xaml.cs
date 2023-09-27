@@ -14,7 +14,7 @@ namespace NFSPatcher
     public partial class MainWindow : Window
     {
         // Strings
-        string version = "0.4.0";
+        string version = "0.4.1";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";
         string latestReleasePage = "https://github.com/KilLo445/NFSPatcher/releases/latest";

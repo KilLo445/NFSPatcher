@@ -43,12 +43,12 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG/US_PATCH_4.zip";
-        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/DirectInputMapper/dimap.dll";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/UG/US_PATCH_4.zip";
+        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/DirectInputMapper/dimap.dll";
         string widescreenLink = "https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsu/NFSUnderground.WidescreenFix.zip";
-        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG/WidescreenFix/NFSUnderground.WidescreenFix.zip";
+        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/UG/WidescreenFix/NFSUnderground.WidescreenFix.zip";
 
-        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/UG/NoCD/Speed.exe";
+        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/UG/NoCD/Speed.exe";
 
         public NFS7()
         {

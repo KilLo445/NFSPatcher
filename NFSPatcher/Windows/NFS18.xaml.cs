@@ -37,8 +37,8 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/TR/Crack/Need%20For%20Speed%20The%20Run.exe";
-        string noCDLELink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/TR/Crack/LE/Need%20For%20Speed%20The%20Run.exe";
+        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/TR/Crack/Need%20For%20Speed%20The%20Run.exe";
+        string noCDLELink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/TR/Crack/LE/Need%20For%20Speed%20The%20Run.exe";
 
         public NFS18()
         {

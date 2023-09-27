@@ -1,4 +1,7 @@
-﻿v0.4.0
+﻿v0.4.1
+- Moved remote files
+
+v0.4.0
 - Added Need for Speed II SE
 - Added Need for Speed III: Hot Pursuit
 

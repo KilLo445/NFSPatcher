@@ -48,13 +48,13 @@ namespace NFSPatcher.Windows
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/Carbon/nfsc_v1.4_en.zip";
-        string patchLinkCE = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/Carbon/nfsc_ce_v1.4_us.zip";
-        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/DirectInputMapper/dimap.dll";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/Carbon/nfsc_v1.4_en.zip";
+        string patchLinkCE = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/Carbon/nfsc_ce_v1.4_us.zip";
+        string dInputMapperLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/DirectInputMapper/dimap.dll";
         string widescreenLink = "https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsc/NFSCarbon.WidescreenFix.zip";
-        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/Carbon/WidescreenFix/NFSCarbon.WidescreenFix.zip";
+        string widescreenLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/Carbon/WidescreenFix/NFSCarbon.WidescreenFix.zip";
 
-        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/NFSPatcher/PatchFiles/Games/Carbon/NoCD/NFSC.exe";
+        string noCDLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/Carbon/NoCD/NFSC.exe";
 
         public NFS10()
         {
