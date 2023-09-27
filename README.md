@@ -96,7 +96,7 @@ Features:
 Any unchecked games are planned.
 
 - [x] Need for Speed 2 SE
-- [ ] Need for Speed III: Hot Pursuit
+- [x] Need for Speed III: Hot Pursuit
 - [ ] Need for Speed: High Stakes
 - [ ] Need for Speed: Hot Pursuit 2
 - [x] Need for Speed: Underground
