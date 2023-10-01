@@ -93,7 +93,7 @@ Features:
 
 <!-- ROADMAP -->
 ## Supported Games
-Any unchecked games are planned.
+### Any unchecked games are planned.
 
 - [x] Need for Speed 2 SE
 - [x] Need for Speed III: Hot Pursuit
@@ -106,6 +106,7 @@ Any unchecked games are planned.
 - [x] Need for Speed: The Run
 
 ### Not planned
+#### This list is subject to change
 - The Need for Speed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=A-Ifhb0KYIM)  
 - Need for Speed: Porsche Unleashed - Would be hard to make automatic, Watch [this video](https://www.youtube.com/watch?v=3v31l71obc0)  
 - Need for Speed: ProStreet - Runs fine, [GenericFix](https://thirteenag.github.io/wfp#nfsps)
