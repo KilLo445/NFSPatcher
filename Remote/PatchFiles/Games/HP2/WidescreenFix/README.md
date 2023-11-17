@@ -1,5 +1,3 @@
-# Readme.txt mirror
-
 Created by: AuToMaNiAk005
 
 Thanks to Ed Kurlyak for finding a way of changing aspect ratio and keeping the original vertical field of view without disappearing objects on the sides of the screen (cameras.ini file).
