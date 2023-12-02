@@ -67,7 +67,7 @@ Classic Need for Speed games are infamous for not running on modern hardware. Th
 
 Features:
 * Automatically download and apply patches
-* Automatically apply widescreen fixes from [ThirteenAG](https://thirteenag.github.io/wfp)
+* Automatically apply widescreen fixes from [ThirteenAG](https://github.com/ThirteenAG/WidescreenFixesPack)
 * Automatically apply NoCD patch
 
 ### Built With
