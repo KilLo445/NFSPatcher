@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -10,12 +11,12 @@ using WinForms = System.Windows.Forms;
 
 namespace NFSPatcher.Windows
 {
-    public partial class NFS3 : Window
+    public partial class NFS4 : Window
     {
         // Strings
-        string gameName = "Need for Speed III: Hot Pursuit";
-        string gameNameS = "NFS III: Hot Pursuit";
-        string exeName = "nfs3.exe";
+        string gameName = "Need for Speed: High Stakes";
+        string gameNameS = "NFS High Stakes";
+        string exeName = "NFSHS.EXE";
 
         // Paths
         string rootPath;
@@ -27,21 +28,23 @@ namespace NFSPatcher.Windows
 
         string patchZip;
 
-        string patchNameZip = "nfs3_modern_patch_v1.6.1.zip";
+        string patchNameZip = "nfs4_modern_patch.zip";
+        string patchName2 = "setupMP.exe";
 
         // Bools
         bool isBusy = false;
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/HP/ModernPatch/nfs3_modern_patch_v1.6.1.zip";
+        string patchLink = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/HS/ModernPatch/nfs4_modern_patch.zip";
+        string patchLink2 = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/HS/ModernPatch/setupMP.exe";
 
-        public NFS3()
+        public NFS4()
         {
             InitializeComponent();
 
             rootPath = Directory.GetCurrentDirectory();
-            tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher", "III");
+            tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher", "HS");
 
             patchZip = Path.Combine(tempPath, patchNameZip);
 
@@ -88,8 +91,6 @@ namespace NFSPatcher.Windows
 
         private void SelectInstallPath()
         {
-            pb.IsIndeterminate = true;
-            StatusText.Text = $"Waiting for user...";
             WinForms.FolderBrowserDialog pathDialog = new WinForms.FolderBrowserDialog();
             pathDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
             pathDialog.Description = $"Please select where you would like to install {gameNameS}";
@@ -117,6 +118,8 @@ namespace NFSPatcher.Windows
             {
                 pb.IsIndeterminate = false;
                 selectPathCanceled = true;
+                PatchList.Visibility = Visibility.Visible;
+                CloseButton.Visibility = Visibility.Visible;
                 StatusText.Text = $"Welcome to NFSPatcher!";
                 return;
             }
@@ -147,11 +150,16 @@ namespace NFSPatcher.Windows
             try
             {
                 pb.IsIndeterminate = false;
-                StatusText.Text = "Downloading Modern Patch v1.6.1...";
-                WebClient webClient = new WebClient();
-                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(PatchDLComplete);
-                webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-                webClient.DownloadFileAsync(new Uri(patchLink), patchZip);
+                try
+                {
+                    StatusText.Text = "Downloading Modern Patch...";
+                    Directory.CreateDirectory(tempPath);
+                    WebClient webClient = new WebClient();
+                    webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(PatchDLComplete);
+                    webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+                    webClient.DownloadFileAsync(new Uri(patchLink), patchZip);
+                }
+                catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); return; }
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); return; }
         }
@@ -159,20 +167,41 @@ namespace NFSPatcher.Windows
         private void PatchDLComplete(object sender, AsyncCompletedEventArgs e)
         {
             pb.Value = 0;
-            InstallPatch();
+            MPSetupDL();
         }
 
+        private void MPSetupDL()
+        {
+            try
+            {
+                StatusText.Text = "Downloading MP Setup...";
+                WebClient webClient = new WebClient();
+                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(PatchDLComplete2);
+                webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+                webClient.DownloadFileAsync(new Uri(patchLink2), Path.Combine(tempPath, patchName2));
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); return; }
+        }
+
+        private void PatchDLComplete2(object sender, AsyncCompletedEventArgs e)
+        {
+            pb.Value = 0;
+            InstallPatch();
+        }
         private async Task InstallPatch()
         {
             await Task.Delay(500);
             pb.IsIndeterminate = true;
+
             try
             {
+                StatusText.Text = $"Extracting {patchNameZip}..."; await Task.Run(() => ZipFile.ExtractToDirectory(patchZip, Path.Combine(tempPath, "ModernPatch")));
+                StatusText.Text = $"Deleting {patchNameZip}..."; await Task.Run(() => File.Delete(patchZip));
+                await Task.Delay(300);
                 StatusText.Text = $"Waiting for user...";
-
                 WinForms.FolderBrowserDialog discDialog = new WinForms.FolderBrowserDialog();
                 discDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
-                discDialog.Description = $"Please select your {gameNameS} disc.\n\n(Location with automenu.exe)";
+                discDialog.Description = $"Please select your {gameNameS} disc.\n\n(Location with AutoRun.exe)";
                 discDialog.RootFolder = Environment.SpecialFolder.MyComputer;
                 discDialog.ShowNewFolderButton = false;
                 WinForms.DialogResult pathResult = discDialog.ShowDialog();
@@ -180,22 +209,23 @@ namespace NFSPatcher.Windows
                 {
                     discPath = Path.Combine(discDialog.SelectedPath);
 
-                    if (File.Exists(Path.Combine(discPath, "automenu.exe")))
+                    if (File.Exists(Path.Combine(discPath, "AUTORUN.EXE")))
                     {
-                        StatusText.Text = $"Copying directory... (1 of 2)"; await Task.Run(() => CopyFilesRecursively(Path.Combine(discPath, "fedata"), Path.Combine(installPath, "fedata")));
-                        await Task.Delay(500);
-                        StatusText.Text = $"Copying directory... (2 of 2)"; await Task.Run(() => CopyFilesRecursively(Path.Combine(discPath, "gamedata"), Path.Combine(installPath, "gamedata")));
-                        await Task.Delay(500);
-                        StatusText.Text = $"Extracting {patchNameZip}..."; await Task.Run(() => ZipFile.ExtractToDirectory(patchZip, Path.Combine(tempPath, "ModernPatch")));
-                        StatusText.Text = $"Deleting {patchNameZip}..."; await Task.Run(() => File.Delete(patchZip));
-                        await Task.Delay(500);
-
+                        StatusText.Text = $"Copying directory... (1 of 2)";
+                        await Task.Run(() => CopyFilesRecursively(Path.Combine(discPath, "DATA"), Path.Combine(installPath, "DATA")));
+                        StatusText.Text = $"Copying directory... (2 of 2)";
+                        await Task.Run(() => CopyFilesRecursively(Path.Combine(discPath, "SAVEDATA"), Path.Combine(installPath, "SAVEDATA")));
+                        await Task.Delay(250);
                         StatusText.Text = $"Removing Read Only..."; await Task.Run(() => RemoveReadOnly(Path.Combine(installPath)));
                         await Task.Delay(200);
-
-                        StatusText.Text = $"Installing Modern Patch..."; await Task.Run(() => CopyFilesRecursively(Path.Combine(tempPath, "ModernPatch"), installPath));
-                        await Task.Delay(300);
-
+                        StatusText.Text = $"Installing Modern Patch...";
+                        await Task.Run(() => CopyFilesRecursively(Path.Combine(tempPath, "ModernPatch"), Path.Combine(installPath)));
+                        await Task.Delay(250);
+                        StatusText.Text = $"Installing MP Setup...";
+                        await Task.Run(() => File.Copy(Path.Combine(tempPath, patchName2), Path.Combine(installPath, patchName2), true));
+                        await Task.Delay(250);
+                        MessageBox.Show("Run setupMP.exe within the game directory to configure the game.", "Modern Patch", MessageBoxButton.OK, MessageBoxImage.Information);
+                        await Task.Delay(250);
                         StatusText.Text = "Welcome to NFSPatcher!";
                         pb.IsIndeterminate = false;
                         MessageBox.Show("All patches installed successfully!", $"{gameName}", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -206,15 +236,13 @@ namespace NFSPatcher.Windows
                     else
                     {
                         MessageBox.Show("Please select correct folder.");
+                        pb.IsIndeterminate = false;
+                        selectPathCanceled = true;
+                        PatchList.Visibility = Visibility.Visible;
+                        CloseButton.Visibility = Visibility.Visible;
+                        StatusText.Text = $"Welcome to NFSPatcher!";
                         return;
                     }
-                }
-                else
-                {
-                    pb.IsIndeterminate = false;
-                    selectPathCanceled = true;
-                    StatusText.Text = $"Welcome to NFSPatcher!";
-                    return;
                 }
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
@@ -224,7 +252,7 @@ namespace NFSPatcher.Windows
         // Other
         ////////////////////
 
-        public static void CopyFilesRecursively(string sourcePath, string targetPath)
+        private static void CopyFilesRecursively(string sourcePath, string targetPath)
         {
             //Now Create all of the directories
             foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
@@ -233,7 +261,7 @@ namespace NFSPatcher.Windows
             }
 
             //Copy all the files & Replaces any files with the same name
-            foreach (string newPath in Directory.GetFiles(sourcePath, "*", SearchOption.AllDirectories))
+            foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
             {
                 File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
             }
@@ -273,3 +301,4 @@ namespace NFSPatcher.Windows
         }
     }
 }
+

@@ -7,21 +7,21 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Grid Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Grid>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="0" BorderThickness="0" BorderBrush="White">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="False">
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="Background" Value="Transparent"/>
-            </Trigger>
-            <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Background" Value="White"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Background" Value="Gray"/>
             </Trigger>
         </Style.Triggers>
     </Style>

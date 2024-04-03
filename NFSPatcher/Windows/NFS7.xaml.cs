@@ -73,7 +73,7 @@ namespace NFSPatcher.Windows
             {
                 try
                 {
-                    Directory.Delete(tempPath);
+                    Directory.Delete(tempPath, true);
                 }
                 catch { }
 
@@ -87,14 +87,17 @@ namespace NFSPatcher.Windows
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
             RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\Need For Speed Underground", true);
-            Object obPath = key.GetValue("Install Dir");
-            if (obPath != null)
+            if (key != null)
             {
-                installPath = (obPath as String);
-                key.Close();
-                installDetected = true;
+                Object obPath = key.GetValue("Install Dir");
+                if (obPath != null)
+                {
+                    installPath = (obPath as String);
+                    key.Close();
+                    installDetected = true;
+                }
+                else { installDetected = false; }
             }
-            else { installDetected = false; }
 
             if (installDetected == true)
             {
@@ -160,7 +163,7 @@ namespace NFSPatcher.Windows
         }
 
         ////////////////////
-        // Main Patch
+        // Main Patches
         ////////////////////
 
         private void MainPatch()
@@ -387,6 +390,7 @@ namespace NFSPatcher.Windows
                 pb.IsIndeterminate = false;
                 MessageBox.Show("NoCD Patch installed!", $"{gameName}", MessageBoxButton.OK, MessageBoxImage.Information);
                 PatchList.Visibility = Visibility.Visible;
+                CloseButton.Visibility = Visibility.Visible;
                 return;
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }

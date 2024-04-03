@@ -11,15 +11,17 @@
         AllowsTransparency="False"
         Background="Black"
         MouseDown="Window_MouseDown"
-        Title="About" Width="600" Height="450">
+        Title="About" Width="600" Height="500">
     <Grid>
         <Image Name="BG" Source="Assets/Images/Backgrounds/Rivals.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Opacity="0.2"/>
         <TextBlock Text="ABOUT" TextAlignment="Center" Width="550" Height="100" Margin="0,50,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="60" FontWeight="Bold"/>
 
         <TextBlock Name="CloseButton" Text="X" FontSize="25" MouseLeftButtonDown="CloseButton_MouseLeftButtonDown" Style="{StaticResource CloseButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Margin="0,5,10,0"/>
 
-        <TextBlock Name="AboutMain" Text="NFSPatcher is a program to help get old Need for Speed games running on modern systems." TextWrapping="Wrap" TextAlignment="Center" Width="550" Height="250" Margin="0,150,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
-        <TextBlock Name="AboutVersion" Text="TO UPDATE VISIT" TextWrapping="Wrap" TextAlignment="Center" Width="350" Margin="0,280,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
-        <TextBlock Name="AboutWebsite" Text="" Typography.Capitals="AllSmallCaps" TextWrapping="Wrap" TextAlignment="Center" Width="500" Margin="0,350,0,0" MouseLeftButtonDown="AboutWebsite_MouseLeftButtonDown" Cursor="Hand" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
+        <TextBlock Name="AboutMain" Text="NFSPatcher is a program created by KilLo to help get old Need for Speed games running on modern systems." TextWrapping="Wrap" TextAlignment="Center" Width="550" Height="250" Margin="0,150,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
+        <TextBlock Name="AboutUpdate" Text="TO UPDATE VISIT" TextWrapping="Wrap" TextAlignment="Center" Width="350" Margin="0,220,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
+        <TextBlock Name="AboutWebsite" Text="github.com" Typography.Capitals="AllSmallCaps" TextWrapping="Wrap" TextAlignment="Center" Width="500" Margin="0,280,0,0" MouseLeftButtonDown="AboutWebsite_MouseLeftButtonDown" Cursor="Hand" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
+
+        <TextBlock Name="AboutVersion" Text="v0.0.0"  TextWrapping="Wrap" TextAlignment="Center" Width="350" Margin="0,420,0,0" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/Assets/Fonts/Roboto/#Roboto" FontWeight="Regular"/>
     </Grid>
 </Window>

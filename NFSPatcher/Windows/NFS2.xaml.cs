@@ -27,15 +27,15 @@ namespace NFSPatcher.Windows
 
         string patchZip;
 
-        string patchNameZip = "nfs2se-win32.zip";
+        string patchNameZip = "nfs2se-win32-v1.4.0.zip";
 
         // Bools
         bool isBusy = false;
         bool selectPathCanceled = false;
 
         // Links
-        string patchLink = "https://github.com/zaps166/NFSIISE/releases/latest/download/nfs2se-win32.zip";
-        string patchLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/NFS2/nfs2se-win32.zip";
+        string patchLink = "https://github.com/zaps166/NFSIISE/releases/latest/download/nfs2se-win32-v1.4.0.zip";
+        string patchLinkBak = "https://github.com/KilLo445/NFSPatcher/raw/main/Remote/PatchFiles/Games/NFS2/nfs2se-win32-v1.4.0.zip";
 
         public NFS2()
         {
@@ -57,7 +57,7 @@ namespace NFSPatcher.Windows
             {
                 try
                 {
-                    Directory.Delete(tempPath);
+                    Directory.Delete(tempPath, true);
                 }
                 catch { }
 
@@ -77,7 +77,7 @@ namespace NFSPatcher.Windows
             }
             if (comboBoxSelection != null)
             {
-                if (comboBoxSelection == "Main Patch")
+                if (comboBoxSelection == "Main Patches")
                 {
                     SelectInstallPath();
                     if (selectPathCanceled == true) { return; }
@@ -116,13 +116,15 @@ namespace NFSPatcher.Windows
             {
                 pb.IsIndeterminate = false;
                 selectPathCanceled = true;
+                PatchList.Visibility = Visibility.Visible;
+                CloseButton.Visibility = Visibility.Visible;
                 StatusText.Text = $"Welcome to NFSPatcher!";
                 return;
             }
         }
 
         ////////////////////
-        // Main Patch
+        // Main Patches
         ////////////////////
 
         private void MainPatch()
@@ -225,6 +227,8 @@ namespace NFSPatcher.Windows
                         MessageBox.Show("Please select correct folder.");
                         pb.IsIndeterminate = false;
                         selectPathCanceled = true;
+                        PatchList.Visibility = Visibility.Visible;
+                        CloseButton.Visibility = Visibility.Visible;
                         StatusText.Text = $"Welcome to NFSPatcher!";
                         return;
                     }

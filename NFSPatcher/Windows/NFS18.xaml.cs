@@ -61,7 +61,7 @@ namespace NFSPatcher.Windows
             {
                 try
                 {
-                    Directory.Delete(tempPath);
+                    Directory.Delete(tempPath, true);
                 }
                 catch { }
 
@@ -75,15 +75,18 @@ namespace NFSPatcher.Windows
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
             RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\Need for Speed(TM) The Run", true);
-            Object obPath = key.GetValue("Install Dir");
-            if (obPath != null)
+            if (key != null)
             {
-                installPath = (obPath as String);
-                if (installPath.EndsWith("\\") || installPath.EndsWith("/")) { installPath = installPath.Remove(installPath.Length - 1, 1); }
-                key.Close();
-                installDetected = true;
+                Object obPath = key.GetValue("Install Dir");
+                if (obPath != null)
+                {
+                    installPath = (obPath as String);
+                    if (installPath.EndsWith("\\") || installPath.EndsWith("/")) { installPath = installPath.Remove(installPath.Length - 1, 1); }
+                    key.Close();
+                    installDetected = true;
+                }
+                else { installDetected = false; }
             }
-            else { installDetected = false; }
 
             if (installDetected == true)
             {
@@ -267,6 +270,7 @@ namespace NFSPatcher.Windows
                 pb.IsIndeterminate = false;
                 MessageBox.Show("NoCD Patch installed!", $"{gameName}", MessageBoxButton.OK, MessageBoxImage.Information);
                 PatchList.Visibility = Visibility.Visible;
+                CloseButton.Visibility = Visibility.Visible;
                 return;
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }

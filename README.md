@@ -53,6 +53,7 @@
       </ul>
     </li>
     <li><a href="#supported-games">Supported Games</a></li>
+    <li><a href="#faq">Frequently Asked Questions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -61,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![NFSPatcher Screenshot](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/Images/AppScreenshot01.png)
+![NFSPatcher Screenshot](https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/Images/AppScreenshotNew.png)
 
 Classic Need for Speed games are infamous for not running on modern hardware. This program helps out with that!
 
@@ -98,8 +99,8 @@ Features:
 
 - [x] Need for Speed 2 SE
 - [x] Need for Speed III: Hot Pursuit
-- [ ] Need for Speed: High Stakes
-- [ ] Need for Speed: Hot Pursuit 2
+- [x] Need for Speed: High Stakes
+- [x] Need for Speed: Hot Pursuit 2
 - [x] Need for Speed: Underground
 - [x] Need for Speed: Underground 2
 - [x] Need for Speed: Most Wanted (2005)
@@ -119,6 +120,10 @@ Features:
 - All NFS games released after 2012
 
 See the [open issues](https://github.com/KilLo445/NFSPatcher/issues) for a full list of proposed features (and known issues).
+
+<!-- FAQ -->
+## Frequently Asked Questions
+You can find the FAQ [here](https://github.com/KilLo445/NFSPatcher/blob/main/FAQ.md).
 
 <!-- LICENSE -->
 ## License

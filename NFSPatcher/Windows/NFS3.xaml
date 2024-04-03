@@ -12,7 +12,7 @@
         AllowsTransparency="False"
         Title="NFSPatcher" Height="450" Width="750">
     <Grid>
-        <Image Source="/Assets/Images/Backgrounds/HP.png" Stretch="UniformToFill" Opacity="0.2"/>
+        <Image Source="/Assets/Images/Backgrounds/HP.jpg" HorizontalAlignment="Right" Stretch="UniformToFill" Opacity="0.2" />
 
         <Image Source="/Assets/Images/Logo/Game/HP.png" Width="350" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
 
@@ -23,7 +23,7 @@
 
         <StackPanel Name="PatchList" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,80" Grid.ColumnSpan="2" Visibility="Visible">
             <ComboBox Name="ComboBox" IsEditable="False" FontSize="18" Width="300" Height="30" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
-                <ComboBoxItem Content="Main Patch"/>
+                <ComboBoxItem Content="Main Patches"/>
             </ComboBox>
             <Button Name="GoBTN" Content="Go!" Click="GoBTN_Click" FontSize="15" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
         </StackPanel>

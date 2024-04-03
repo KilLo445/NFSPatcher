@@ -17,6 +17,7 @@ namespace NFSPatcher
 
             this.Topmost = true;
             AboutWebsite.Text = $"{Web}";
+            AboutVersion.Text = "v" + MainWindow.version;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

@@ -1,4 +1,17 @@
-﻿v0.4.1
+﻿v1.0.0
+- Added Need for Speed: High Stakes
+- Added Need for Speed: Hot Pursuit 2
+- Added tooltips
+- Added Exit button
+- Added update check
+- Added random text cause funny
+- Added FAQ button
+- Fixed multiple possible crashes
+- Fixed temp files not deleting on close
+- Updated NFS II SE Wrapper link
+- Moved version to about screen
+
+v0.4.1
 - Moved remote files
 
 v0.4.0
@@ -17,4 +30,3 @@ v0.2.0
 
 v0.1.0
 - Initial release
-- Only Need for Speed: Underground is currently available.

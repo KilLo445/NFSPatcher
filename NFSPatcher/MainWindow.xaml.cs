@@ -1,9 +1,11 @@
 ﻿using NFSPatcher.Windows;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -14,15 +16,18 @@ namespace NFSPatcher
     public partial class MainWindow : Window
     {
         // Strings
-        string version = "0.4.1";
+        public static string version = "1.0.0";
+        string latestVer = "https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/latest-version.txt";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";
-        string latestReleasePage = "https://github.com/KilLo445/NFSPatcher/releases/latest";
+        string latestRelease = "https://github.com/KilLo445/NFSPatcher/releases/latest";
+        string faqLink = "https://github.com/KilLo445/NFSPatcher/blob/main/FAQ.md";
 
         // Paths
         string rootPath;
         string tempPath;
 
+        bool updateAvailable;
         bool delTempOnStart = false;
 
         public MainWindow()
@@ -37,6 +42,25 @@ namespace NFSPatcher
 
             rootPath = Directory.GetCurrentDirectory();
             tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher");
+
+            var random = new Random();
+            var list = new List<string> {
+                "lmao",
+                "VROOOOM",
+                "First, I'm gonna take your ride, then I'm gonna take your girl!",
+                "Sit down! How you been?",
+                "I want every single unit after the guy. Everyone? EVERYONE!",
+                "Bus stop's that way, champ.",
+                "Hey, where's your fancy ride?",
+                "Ouch! That's totally weak dude!",
+                "How's your car running?",
+                "Cars? I got covered.",
+                "I'm glad you're here, sugar plum.",
+                "EA Games. Make running these games challenging... get it??? ...",
+                "EA Spor... wait wrong one."
+            };
+            int index = random.Next(list.Count);
+            randText.Text = list[index];
 
             VersionText.Text = "v" + version;
 
@@ -55,14 +79,39 @@ namespace NFSPatcher
             }
         }
 
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            CheckForUpdates();
+        }
+
         protected override void OnClosing(CancelEventArgs e)
         {
-            if (Directory.Exists(tempPath))
+            try
             {
-                try
+                Directory.Delete(tempPath, true);
+            }
+            catch { }
+        }
+
+        private void CheckForUpdates()
+        {
+            try
+            {
+                Version localVersion = new Version(version);
+                WebClient webClient = new WebClient();
+                Version onlineVersion = new Version(webClient.DownloadString(latestVer));
+                if (onlineVersion.IsDifferentThan(localVersion))
                 {
-                    Directory.Delete(tempPath);
-                } catch { }
+                    updateAvailable = true;
+                    MessageBoxResult updateAvailableMSG = MessageBox.Show("An update for NFS Patcher has been found! Would you like to download it?", "Update Available", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    if (updateAvailableMSG == MessageBoxResult.Yes) { Process.Start(latestRelease); Application.Current.Shutdown(); }
+                }
+                else { updateAvailable = false; }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking for updates.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -146,13 +195,25 @@ namespace NFSPatcher
         // NFS: High Stakes
         private void NFS4()
         {
-            MessageBox.Show("Coming soon.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                NFS4 hsWindow = new NFS4();
+                this.Close();
+                hsWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
         // NFS: Hot Pursuit 2
         private void NFS6()
         {
-            MessageBox.Show("Coming soon.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                NFS6 hp2Window = new NFS6();
+                this.Close();
+                hp2Window.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
         // NFS: Underground
@@ -273,12 +334,27 @@ namespace NFSPatcher
             else { MessageBox.Show("Temp path does not exist.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
+        private void CheckUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            CheckForUpdates();
+            if (updateAvailable == false) { MessageBox.Show("No update available", "Check for updates", MessageBoxButton.OK, MessageBoxImage.Information); }
+        }
+
         private void ViewChangelog_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 Changelog changelogWindow = new Changelog();
                 changelogWindow.Show();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        private void ViewFAQ_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start(faqLink);
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
@@ -296,7 +372,7 @@ namespace NFSPatcher
         {
             try
             {
-                Process.Start(latestReleasePage);
+                Process.Start(latestRelease);
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
@@ -309,6 +385,83 @@ namespace NFSPatcher
                 aboutWindow.Show();
             }
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+        private void ExitApp_Click(object sender, RoutedEventArgs e)
+        {
+            if(Directory.Exists(tempPath))
+            {
+                try
+                {
+                    Directory.Delete(tempPath, true);
+                }
+                catch { }
+            }
+
+            try
+            {
+                Application.Current.Shutdown();
+            }
+            catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+    }
+
+    struct Version
+    {
+        internal static Version zero = new Version(0, 0, 0);
+
+        private short major;
+        private short minor;
+        private short subMinor;
+
+        internal Version(short _major, short _minor, short _subMinor)
+        {
+            major = _major;
+            minor = _minor;
+            subMinor = _subMinor;
+        }
+        internal Version(string _version)
+        {
+            string[] versionStrings = _version.Split('.');
+            if (versionStrings.Length != 3)
+            {
+                major = 0;
+                minor = 0;
+                subMinor = 0;
+                return;
+            }
+
+            major = short.Parse(versionStrings[0]);
+            minor = short.Parse(versionStrings[1]);
+            subMinor = short.Parse(versionStrings[2]);
+        }
+
+        internal bool IsDifferentThan(Version _otherVersion)
+        {
+            if (major != _otherVersion.major)
+            {
+                return true;
+            }
+            else
+            {
+                if (minor != _otherVersion.minor)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (subMinor != _otherVersion.subMinor)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return $"{major}.{minor}.{subMinor}";
         }
     }
 }

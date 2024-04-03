@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,10 +48,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Assets\Images\Logo\nfs.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -90,6 +92,15 @@
     </Compile>
     <Compile Include="Windows\NFS3.xaml.cs">
       <DependentUpon>NFS3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS4.xaml.cs">
+      <DependentUpon>NFS4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS6.xaml.cs">
+      <DependentUpon>NFS6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NFS6Res.xaml.cs">
+      <DependentUpon>NFS6Res.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NFS7.xaml.cs">
       <DependentUpon>NFS7.xaml</DependentUpon>
@@ -155,6 +166,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NFS3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NFS6Res.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -259,7 +282,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Backgrounds\Carbon.png" />
-    <Resource Include="Assets\Images\Backgrounds\HP.png" />
+    <Resource Include="Assets\Images\Backgrounds\HP2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Backgrounds\MW.png" />
@@ -302,6 +325,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Logo\Vertical\LogoWhite2_400px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Backgrounds\HP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo\Game\HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Backgrounds\HS.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
