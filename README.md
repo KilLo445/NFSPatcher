@@ -23,9 +23,9 @@
     Get old Need for Speed games running on modern systems.
     <br />
     <br />
-    <a href="https://github.com/KilLo445/NFSPatcher/issues">Report Bug</a>
+    <a href="https://github.com/KilLo445/NFSPatcher/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBug+Report%5D+Simple+description+of+the+bug">Report Bug</a>
     ·
-    <a href="https://github.com/KilLo445/NFSPatcher/issues">Request Feature</a>
+    <a href="https://github.com/KilLo445/NFSPatcher/issues/new?assignees=&labels=enhancement&projects=&template=feature-request.md&title=%5BFeature+Req%5D+Simple+description+of+your+request">Request Feature</a>
     <br />
     <br />
   </p>
