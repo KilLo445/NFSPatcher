@@ -76,7 +76,9 @@ namespace NFSPatcher.Windows
             if (comboBoxSelection == null || comboBoxSelection == "")
             {
                 MessageBox.Show("Please select a patch method.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
             }
+
             if (comboBoxSelection != null)
             {
                 if (comboBoxSelection == "Main Patches")

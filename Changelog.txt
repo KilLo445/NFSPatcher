@@ -1,4 +1,8 @@
-﻿v1.0.0
+﻿v1.0.1
+- Fixed a small oversight
+- Updated random messages
+
+v1.0.0
 - Added Need for Speed: High Stakes
 - Added Need for Speed: Hot Pursuit 2
 - Added tooltips

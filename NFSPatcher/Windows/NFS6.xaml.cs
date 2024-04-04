@@ -63,6 +63,13 @@ namespace NFSPatcher.Windows
 
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
+            string comboBoxSelection = ComboBox.Text;
+            if (comboBoxSelection == null || comboBoxSelection == "")
+            {
+                MessageBox.Show("Please select a patch method.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
             RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\Need For Speed Hot Pursuit 2", true);
             if (key != null)
             {
@@ -92,11 +99,6 @@ namespace NFSPatcher.Windows
                 if (selectPathCanceled == true) { return; }
             }
 
-            string comboBoxSelection = ComboBox.Text;
-            if (comboBoxSelection == null || comboBoxSelection == "")
-            {
-                MessageBox.Show("Please select a patch method.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
             if (comboBoxSelection != null)
             {
                 if (comboBoxSelection == "Main Patches")

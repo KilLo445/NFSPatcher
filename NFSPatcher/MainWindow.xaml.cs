@@ -16,7 +16,7 @@ namespace NFSPatcher
     public partial class MainWindow : Window
     {
         // Strings
-        public static string version = "1.0.0";
+        public static string version = "1.0.1";
         string latestVer = "https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/latest-version.txt";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";
@@ -45,7 +45,6 @@ namespace NFSPatcher
 
             var random = new Random();
             var list = new List<string> {
-                "lmao",
                 "VROOOOM",
                 "First, I'm gonna take your ride, then I'm gonna take your girl!",
                 "Sit down! How you been?",
@@ -57,7 +56,6 @@ namespace NFSPatcher
                 "Cars? I got covered.",
                 "I'm glad you're here, sugar plum.",
                 "EA Games. Make running these games challenging... get it??? ...",
-                "EA Spor... wait wrong one."
             };
             int index = random.Next(list.Count);
             randText.Text = list[index];
