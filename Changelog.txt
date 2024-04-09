@@ -1,4 +1,8 @@
-﻿v1.0.1
+﻿v1.0.2
+- Fixed another oversight, appearently I can't code (Thanks @bauchfleisch on Discord)
+- Added open temp button
+
+v1.0.1
 - Fixed a small oversight
 - Updated random messages
 

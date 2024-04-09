@@ -318,6 +318,19 @@ namespace NFSPatcher
             catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
 
+        private void OpenTemp_Click(object sender, RoutedEventArgs e)
+        {
+            if (Directory.Exists(tempPath))
+            {
+                try
+                {
+                    Process.Start(tempPath);
+                }
+                catch (Exception ex) { MessageBox.Show($"{ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
+            else { MessageBox.Show("Temp path does not exist.", "NFSPatcher", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
         private void DelTemp_Click(object sender, RoutedEventArgs e)
         {
             if (Directory.Exists(tempPath))

@@ -38,6 +38,8 @@
                 <ContextMenu Name="settingsCM">
                     <MenuItem Name="RootPath" Header="Open root path" ToolTip="Open the directory that contains NFSPatcher.exe"
                               Click="RootPath_Click"/>
+                    <MenuItem Name="OpenTemp" Header="Open temp" ToolTip="Open temporary directory used by NFSPatcher"
+                              Click="OpenTemp_Click"/>
                     <MenuItem Name="DelTemp" Header="Delete temp" ToolTip="Delete all temporary files used by NFSPatcher"
                               Click="DelTemp_Click"/>
                     <MenuItem Name="CheckUpdate" Header="Check for updates"

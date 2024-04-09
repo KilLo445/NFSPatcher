@@ -49,9 +49,6 @@ namespace NFSPatcher.Windows
 
             createBat = Path.Combine(tempPath, "NFS_TR_CREATE_FIREWALL.bat");
             deleteBat = Path.Combine(tempPath, "NFS_TR_DELETE_FIREWALL.bat");
-
-            if (Directory.Exists(tempPath)) { Directory.Delete(tempPath, true); }
-            Directory.CreateDirectory(tempPath);
         }
 
         private void CloseButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -74,6 +71,8 @@ namespace NFSPatcher.Windows
 
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
+            Directory.CreateDirectory(tempPath);
+
             string comboBoxSelection = ComboBox.Text;
             if (comboBoxSelection == null || comboBoxSelection == "")
             {

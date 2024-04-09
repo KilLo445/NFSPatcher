@@ -63,6 +63,8 @@ namespace NFSPatcher.Windows
 
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
+            Directory.CreateDirectory(tempPath);
+
             string comboBoxSelection = ComboBox.Text;
             if (comboBoxSelection == null || comboBoxSelection == "")
             {
@@ -143,8 +145,6 @@ namespace NFSPatcher.Windows
 
         private void MainPatch()
         {
-            if (Directory.Exists(tempPath)) { Directory.Delete(tempPath, true); Directory.CreateDirectory(tempPath); }
-
             PatchList.Visibility = Visibility.Hidden;
             CloseButton.Visibility = Visibility.Hidden;
 

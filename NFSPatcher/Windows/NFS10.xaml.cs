@@ -68,9 +68,6 @@ namespace NFSPatcher.Windows
 
             wfpZip = Path.Combine(tempPath, "NFSCarbon.WidescreenFix.zip");
             dInputDLL = Path.Combine(tempPath, "dimap.dll");
-
-            if (Directory.Exists(tempPath)) { Directory.Delete(tempPath, true); }
-            Directory.CreateDirectory(tempPath);
         }
 
         private void CloseButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -93,6 +90,8 @@ namespace NFSPatcher.Windows
 
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
+            Directory.CreateDirectory(tempPath);
+
             string comboBoxSelection = ComboBox.Text;
             if (comboBoxSelection == null || comboBoxSelection == "")
             {

@@ -44,9 +44,6 @@ namespace NFSPatcher.Windows
             tempPath = Path.Combine(Path.GetTempPath(), "NFSPatcher", "III");
 
             patchZip = Path.Combine(tempPath, patchNameZip);
-
-            if (Directory.Exists(tempPath)) { Directory.Delete(tempPath, true); }
-            Directory.CreateDirectory(tempPath);
         }
 
         private void CloseButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -69,6 +66,8 @@ namespace NFSPatcher.Windows
 
         private void GoBTN_Click(object sender, RoutedEventArgs e)
         {
+            Directory.CreateDirectory(tempPath);
+
             string comboBoxSelection = ComboBox.Text;
             if (comboBoxSelection == null || comboBoxSelection == "")
             {
