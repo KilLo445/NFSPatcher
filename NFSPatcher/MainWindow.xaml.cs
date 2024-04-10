@@ -16,7 +16,7 @@ namespace NFSPatcher
     public partial class MainWindow : Window
     {
         // Strings
-        public static string version = "1.0.2";
+        public static string version = "1.0.3";
         string latestVer = "https://raw.githubusercontent.com/KilLo445/NFSPatcher/main/Remote/latest-version.txt";
 
         string githubLink = "https://github.com/KilLo445/NFSPatcher";

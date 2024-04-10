@@ -306,7 +306,7 @@
     <Resource Include="Assets\Images\Logo\Game\UG2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Images\Logo\Game\HP2.png" />
+    <Resource Include="Assets\Images\Logo\Game\HP2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\Logo\Game\TR.png" />
