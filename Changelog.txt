@@ -1,8 +1,11 @@
-﻿v1.0.3
+﻿v1.0.4
+- Fixed an issue where the patcher would not install patches if you cancel the path select prompt
+
+v1.0.3
 - Fixed HP2 logo not displaying
 
 v1.0.2
-- Fixed another oversight, appearently I can't code (Thanks @bauchfleisch on Discord)
+- Fixed another oversight, apparently I can't code (Thanks @bauchfleisch on Discord)
 - Added open temp button
 
 v1.0.1
@@ -33,7 +36,7 @@ v0.3.0
 - Added Need for Speed: Most Wanted (2005)
 - Added Need for Speed: Carbon
 - Added Need for Speed: The Run
-- Added abillity to delete Temp Folder
+- Added ability to delete Temp Folder
 
 v0.2.0
 - Added Need for Speed: Underground 2

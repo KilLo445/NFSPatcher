@@ -92,6 +92,8 @@ namespace NFSPatcher.Windows
         {
             Directory.CreateDirectory(tempPath);
 
+            selectPathCanceled = false;
+
             string comboBoxSelection = ComboBox.Text;
             if (comboBoxSelection == null || comboBoxSelection == "")
             {

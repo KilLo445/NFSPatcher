@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 
 namespace NFSPatcher.Windows
 {
@@ -30,67 +29,6 @@ namespace NFSPatcher.Windows
                 selectedResLink = widescreenLink + comboBoxSelection + ".zip";
                 resConfirmed = true;
                 this.Close();
-
-                //if (comboBoxSelection == "1280x720")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1280x768")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1280x800")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1366x768")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1440x900")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1600x900")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1600x1024")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1680x1050")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1920x1080")
-                //{
-
-                //}
-                //if (comboBoxSelection == "1920x1200")
-                //{
-
-                //}
-                //if (comboBoxSelection == "2560x1080")
-                //{
-
-                //}
-                //if (comboBoxSelection == "2560x1440")
-                //{
-
-                //}
-                //if (comboBoxSelection == "2560x1600")
-                //{
-
-                //}
-                //if (comboBoxSelection == "3840x1440")
-                //{
-
-                //}
-                //if (comboBoxSelection == "3840x2160")
-                //{
-
-                //}
             }
             else { return; }
         }
