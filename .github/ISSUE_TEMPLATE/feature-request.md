@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea for NFSPatcher
 title: "[Feature Req] Simple description of your request"
 labels: enhancement
-assignees: ''
+assignees: 'KilLo445'
 
 ---
 

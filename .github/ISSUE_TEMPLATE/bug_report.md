@@ -1,9 +1,9 @@
 ---
 name: Bug report
-about: Create a report to help NFSPatcher improve
+about: Create a bug report to help NFSPatcher improve
 title: "[Bug Report] Simple description of the bug"
 labels: bug
-assignees: ''
+assignees: 'KilLo445'
 
 ---
 
@@ -23,9 +23,9 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
+**Desktop (if necessary):**
  - OS: [e.g. Windows 10]
- - OS Version [e.g. 22]
+ - OS Version [e.g. 22H2]
  - Software Version [e.g. v1.0.0]
 
 **Additional context**
