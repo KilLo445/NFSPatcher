@@ -34,7 +34,7 @@
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
   <br />
-  [![Downloads][dl-shield]][issues-url]
+  [![Downloads][dl-shield]][latest]
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -159,6 +159,7 @@ NFSPatcher is not affiliated with EA nor the Need for Speed brand in any way.
 [Framework]: https://img.shields.io/badge/.NET_Framework-4.8-purple
 [framework-url]: https://dotnet.microsoft.com/en-us/download/dotnet-framework
 [dl-shield]: https://img.shields.io/github/downloads/KilLo445/NFSPatcher/total?style=for-the-badge&label=Downloads&color=2E3440
+[latest]: https://github.com/KilLo445/NFSPatcher/releases/latest
 
 <!-- README Template -->
 <!-- https://github.com/othneildrew/Best-README-Template -->
