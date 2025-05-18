@@ -135,7 +135,7 @@ See the [open issues](https://github.com/KilLo445/NFSPatcher/issues) for a full 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
