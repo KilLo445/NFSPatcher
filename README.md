@@ -55,7 +55,7 @@
       </ul>
     </li>
     <li><a href="#supported-games">Supported Games</a></li>
-    <li><a href="#faq">Frequently Asked Questions</a></li>
+    <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -125,7 +125,12 @@ See the [open issues](https://github.com/KilLo445/NFSPatcher/issues) for a full 
 
 <!-- FAQ -->
 ## Frequently Asked Questions
-You can find the FAQ [here](https://github.com/KilLo445/NFSPatcher/blob/main/FAQ.md).
+1. Something broke! Help!
+    - If you are having issues with anything, please [open an issue](https://github.com/KilLo445/NFSPatcher/issues) or join my [Discord Server](https://discord.gg/EgBPkAC)!
+2. Does this work with the disc versions of NFS?
+    - Yes! It was actually made for and tested on the phyical discs!
+3. Where does the patcher download files?
+    - The main patches for most games are official patches, but since they are no longer hosted officially on EA's servers, I downloaded them from the [Wayback Machine](https://web.archive.org/) and they are hosted [here](https://github.com/KilLo445/NFSPatcher/tree/main/Remote/PatchFiles). For the community made patches, they are downloaded from the official source if possible, [ThirteenAG's WFP](https://github.com/ThirteenAG/WidescreenFixesPack), [Zaps' NFS II SE Wrapper](https://github.com/zaps166/NFSIISE/), etc. If the download fails it will resort to downloading my backup on the repo. (If you are a developer of one of these patches and don't like me hosting it on my repo, please send me a message!)
 
 <!-- LICENSE -->
 ## License
