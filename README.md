@@ -141,7 +141,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 - Discord
-    - @decentloser / DecentLoser#7263
+    - @killo445
     - [My Server](https://discord.gg/66qymzdtMw) (Preferred)
 - Twitter / X
   - [@KilLo445](https://twitter.com/KilLo445)
